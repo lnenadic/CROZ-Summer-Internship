@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  server:
+    image: server
+    ports:
+      - "8091:8000"
+    networks:
+      - my_network
+
+  client:
+    image: client
+    ports:
+      - "8090:8090"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+  
